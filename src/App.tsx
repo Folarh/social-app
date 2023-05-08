@@ -1,12 +1,21 @@
 
 
 import './App.css'
+import Login from './pages/login/Login'
+import Signup from './pages/signup/Signup'
+
 
 function App() {
 
+ return (
+ 
+ <>
+ <Login/>
+<Signup/>
+ </>
 
-  return (
-    <h1 className='text-red-600 text-center '>my social media app</h1>
+ 
+   
   )
 }
 
