@@ -1,22 +1,15 @@
+import "./App.css";
+import Login from "./pages/login/Login";
 
-
-import './App.css'
-import Login from './pages/login/Login'
-import Signup from './pages/signup/Signup'
-
+import Signup from "./pages/signup/Signup";
 
 function App() {
-
- return (
- 
- <>
- <Login/>
-<Signup/>
- </>
-
- 
-   
-  )
+  return (
+    <>
+      <Signup />
+      <Login />
+    </>
+  );
 }
 
-export default App
+export default App;
