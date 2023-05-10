@@ -1,6 +1,6 @@
 // import use signup hook
 import useSignup from "../../hooks/useSignup";
-import useLogout from "../../hooks/useLogout";
+// import useLogout from "../../hooks/useLogout";
 import { useState } from "react";
 
 interface User {
@@ -18,7 +18,7 @@ export default function Signup() {
 
   // custom sigup hook
   const { error, signup } = useSignup();
-  const { logout } = useLogout();
+  // const { logout } = useLogout();
 
   // function to help user submit form
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -26,12 +26,15 @@ export default function Signup() {
     signup(user.email, user.password);
   };
   return (
-    <div className=" flex-column justify-center items-center border border-blue-300">
+    <div className=" flex-column justify-center items-center  ">
       <h1 className="text-center">Signup page</h1>
 
       {/* FORM INPUT  */}
-      <form className="border border-red-600 p-10" onSubmit={handleSubmit}>
-        <div className="mb-6 mt-6">
+      <form
+        className="border w-1/2 mx-auto mt-10 p-10 "
+        onSubmit={handleSubmit}
+      >
+        <div className="mb-6 mt-6  ">
           <label
             htmlFor="username"
             className="mb-2 text-sm  font-medium text-gray-900 "
@@ -86,12 +89,13 @@ export default function Signup() {
         <button className="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm w-full px-5 text-center">
           SignUp
         </button>
-        <button
+
+        {/* <button
           onClick={logout}
           className="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm w-full px-5 text-center"
         >
-          SignUp
-        </button>
+          Logout
+        </button> */}
         {error && <p>{error}</p>}
       </form>
     </div>
