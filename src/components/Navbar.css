@@ -1,0 +1,60 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 10px 50px;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .logo h2{
+   color: #543EE0;
+   font-weight: 700;
+   font-size: 48px;
+   line-height: 72px;
+}
+
+.navbar .navigations{
+    min-width: 40%;
+}
+
+.navbar .navigations ul{
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+}
+.navbar .navigations ul li{
+  font-weight: 700;
+}
+
+.navbar .auth{
+    min-width: 20%;
+}
+
+.navbar .auth .login{
+   background-color: #ffffff;
+   color: #111111;
+   padding: 0.5rem;
+   width: 100px;
+   font-weight: 700;
+   font-size: 18px;
+   line-height: 27px;
+   border: 1px solid #543EE0;
+   border-radius: 5px;
+   margin-right: 5px;
+}
+
+.navbar .auth .signup{
+   background-color: #543EE0;
+   color: #FFFFFF;
+   padding: 0.5rem;
+   width: 100px;
+   font-weight: 700;
+   font-size: 18px;
+   line-height: 27px;
+   border: 1px solid #543EE0;
+   border-radius: 5px;
+    margin-left: 5px;
+}

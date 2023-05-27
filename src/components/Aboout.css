@@ -1,0 +1,40 @@
+.about{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+    border: 2px solid red;
+}
+
+.about .about-chatter{
+    flex: 0.6;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    margin-right: 20px;
+}
+
+.about .about-chatter h1{
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 72px;
+}
+
+.about .about-chatter p{
+   margin-top: 2rem;
+}
+
+
+.about .chatter-image{
+    flex: 0.4;
+    background-image: url(../assets/about-chatter.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    width: 500px;
+    height: 404px;
+    margin-right: 10px;
+
+}
+
+

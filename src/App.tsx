@@ -1,13 +1,14 @@
 import "./App.css";
-import Login from "./pages/login/Login";
-
-import Signup from "./pages/signup/Signup";
+import About from "./components/About";
+import Hero from "./components/Hero";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <>
-      <Login />
-      <Signup />
+      <Navbar />
+      <Hero />
+      <About />
     </>
   );
 }
