@@ -1,4 +1,5 @@
 import "./Aboout.css";
+import about from "../assets/about-chatter.png";
 
 export default function About() {
   return (
@@ -13,7 +14,7 @@ export default function About() {
         </p>
       </div>
       <div className="chatter-image">
-        {/* backgrounnd image from css goes here */}
+        <img src={about} />
       </div>
     </main>
   );

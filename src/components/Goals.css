@@ -1,0 +1,53 @@
+.goals{
+    padding: 30px 320px;
+
+}
+
+.goals h1{
+    text-align: center;
+}
+
+.goals p{
+    margin-top: 1rem;
+    color: #8b8b8b;
+    font-weight: 600;
+}
+
+.cards{
+    display: flex;
+    margin-top: 3rem;
+    justify-content: space-between;
+}
+
+.card{
+    
+    border: 0.5px solid grey;
+    padding: 10px;
+     /* margin-right: 10px; */
+     width: 280px;
+}
+
+@media (max-width:820px){
+    .goals{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        padding: 40px;
+    }
+    .cards{
+       
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .card{
+        width: 100%;
+        text-align: center;
+    }
+       
+    
+    
+ }

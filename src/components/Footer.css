@@ -1,0 +1,45 @@
+.footer{
+   background: #FFEDCC80;
+   display: flex;
+   justify-content: space-between;
+ 
+   padding: 80px;
+   min-height: 300px;
+
+}
+.footer .logo{
+    color: #543EE0;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 72px;
+    width: 20%;
+}
+
+.foot-info{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+}
+
+.footer .explore h1{
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 36px;
+}
+
+.footer .explore ul li{
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+    margin-top: 2rem;
+}
+
+@media(width <= 768px){
+    .footer{
+        display: flex;
+        flex-direction: column;
+    }
+    .foot-info{
+        width: 100%;
+    }
+}
