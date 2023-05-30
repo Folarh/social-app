@@ -4,10 +4,11 @@
     background-color: #ffffff;
     padding: 10px 50px;
     align-items: center;
-    position: sticky;
+    /* position: sticky; */
     top: 0;
     z-index: 100;
     min-height:70px;
+    max-width: 100%;
 }
 
 .navbar .logo h2{
@@ -18,7 +19,6 @@
 }
 
 .navbar .navigations{
-    /* min-width: 40%; */
     width: 60%;
 }
 
@@ -31,9 +31,7 @@
   font-weight: 700;
 }
 
-.navbar .auth{
-    /* min-width: 20%; */
-}
+
 
 .navbar .auth .login{
    background-color: #ffffff;
@@ -87,7 +85,6 @@
         background-color: #FFFFFF;
         color:#543EE0;
         font-size: 50px;
-        transition: all .5s ease-in-out;
     }
 
     .harmburger .clear{
@@ -95,16 +92,19 @@
         background-color: #FFFFFF;
         color:#543EE0;
         font-size: 50px;
-        transition: all .5s ease-in-out;
+      
     }
     
     
+    
    #navigation-mobile{
-    position: absolute;
-    top: 80px;
+   position: absolute;
+    top: 90px;
     left: 0;
+    z-index: 1;
     height: 100vh;
     width: 100%;
+    max-width: 100vw;
     background-color: #543EE0;
     color: white;
     display: flex;
@@ -112,8 +112,14 @@
     justify-content: space-around;
     align-items: center;
     max-height: 800px;
+    
+   
    
    }
+
+  
+
+   
 
 #navigation-mobile .navigations ul{
     display: flex;
@@ -127,20 +133,12 @@
     font-size: 20px;
 }
 
-/* #navigation-mobile .signup:hover{
-    background-color: #ffffff;
-    color:#543EE0;
-    
-} */
+
 
 #navigation-mobile .login{
     border: 1px solid #FFFFFF;
     font-size: 20px;
 }
 
-/* #navigation-mobile .login:hover{
-    background-color: #543EE0;
-    color:#ffffff;
-    
-} */
+
 }

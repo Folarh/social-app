@@ -12,7 +12,6 @@
     flex-direction: space-between;
    padding: 40px;
     align-items: center;
-    border: 2px solid red;
    
 }
 
@@ -24,13 +23,11 @@
 .images .images-two{
     display: flex;
     flex-direction: column;
-    border: 2px solid red;
 }
 
 .images .images-one{
     display: flex;
     flex-direction: column;
-    border: 2px solid blue;
 }
 
 .connect .connect-content{
@@ -82,7 +79,7 @@
    .images-two{
     display: flex;
     align-items: center;
-    border: 2px solid red;
+  
    }
 
    .connect .connect-content{
