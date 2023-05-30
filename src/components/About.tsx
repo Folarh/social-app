@@ -1,5 +1,4 @@
 import "./Aboout.css";
-import about from "../assets/about-chatter.png";
 
 export default function About() {
   return (
@@ -13,9 +12,7 @@ export default function About() {
           and able to communicate your great ideas with people
         </p>
       </div>
-      <div className="chatter-image">
-        <img src={about} />
-      </div>
+      <div className="chatter-image">{/* <img src={about} /> */}</div>
     </main>
   );
 }

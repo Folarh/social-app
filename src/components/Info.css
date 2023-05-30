@@ -1,19 +1,16 @@
 .info{
     min-width: 400px;
+    display: flex;
     padding: 40px;
     display: flex;
     justify-content: space-between;
     background-color: #FFEDCC80;
 }
 
-.info .info-image {
-    padding: 20px;
-    width: 30%;
-    text-align: center;
-}
 
 .info .info-image img {
     border-radius: 50%;
+     
 }
 
 .info .info-content {
@@ -54,12 +51,15 @@
         align-items: center;
     }
 
-    .info .info-image{
-        width: 100%;
-    }
+    
 
     .info .info-para{
         padding: 0;
+    }
+
+    .info .info-image img {
+    border-radius: 50%;
+     width: 100%;
     }
        
     

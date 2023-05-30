@@ -1,7 +1,7 @@
 .connect{
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    padding: 30px 100px;
 }
 
 
@@ -12,7 +12,8 @@
     flex-direction: space-between;
    padding: 40px;
     align-items: center;
-    width: 40%;
+    border: 2px solid red;
+   
 }
 
 .images img{
@@ -23,11 +24,17 @@
 .images .images-two{
     display: flex;
     flex-direction: column;
+    border: 2px solid red;
+}
+
+.images .images-one{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid blue;
 }
 
 .connect .connect-content{
-    width: 60%;
-    padding: 120px;
+    padding: 40px;
 }
 
 .connect .connect-content h1{
@@ -64,7 +71,7 @@
 
    .images{
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
    }
@@ -73,11 +80,13 @@
    }
 
    .images-two{
+    display: flex;
     align-items: center;
+    border: 2px solid red;
    }
 
    .connect .connect-content{
-   padding: 0;
+   padding: 30px;
    width: 100%;
    
 }

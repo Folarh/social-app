@@ -42,4 +42,17 @@
     .foot-info{
         width: 100%;
     }
+    .footer .logo{
+       
+      
+        width: 100%;
+    }
+   
 }
+
+/* @media(width <= 768px){
+    .footer .explore ul li{
+       margin: 10px;
+      
+    }
+} */
