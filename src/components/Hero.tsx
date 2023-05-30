@@ -1,11 +1,10 @@
 import "./Hero.css";
-import hero from "../assets/hero.png";
+// import hero from "../assets/hero.png";
 
 export default function Hero() {
   return (
     <main className="hero">
-      <img src={hero} />
-
+      {/* <img src={hero} />  */}
       <div className="hero-content">
         <h1>
           Welcome to Chatter: A Haven for Text-

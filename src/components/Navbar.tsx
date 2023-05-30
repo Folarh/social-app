@@ -26,6 +26,7 @@ export default function Navbar() {
           <button className="signup">Sign Up</button>
         </div>
       </div>
+
       <div className="harmburger" onClick={() => setToggle(!toggle)}>
         {toggle ? (
           <ClearIcon className="clear" />
