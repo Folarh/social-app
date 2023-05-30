@@ -2,8 +2,7 @@
    background: #FFEDCC80;
    display: flex;
    justify-content: space-between;
- 
-   padding: 80px;
+   padding: 40px;
    min-height: 300px;
 
 }
@@ -12,13 +11,14 @@
     font-weight: 700;
     font-size: 48px;
     line-height: 72px;
-    width: 20%;
 }
 
 .foot-info{
     display: flex;
-    width: 80%;
+    flex-wrap: wrap;
+    flex: 1;
     justify-content: space-between;
+    border: 2px solid red;
 }
 
 .footer .explore h1{
