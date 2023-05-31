@@ -1,3 +1,4 @@
+//styles
 import "./Hero.css";
 // import hero from "../assets/hero.png";
 

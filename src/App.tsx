@@ -1,25 +1,22 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+//styles
 import "./App.css";
-import About from "./components/About";
-import Connect from "./components/Connect";
-import Footer from "./components/Footer";
-import Goals from "./components/Goals";
-import Hero from "./components/Hero";
-import Info from "./components/Info";
-import Navbar from "./components/Navbar";
+//components
+
+import LandingPage from "./pages/landing-page/LandingPage";
+import Signup from "./pages/signup/Signup";
+import Login from "./pages/login/Login";
 
 function App() {
   return (
     <div className="app">
-      <Navbar />
-      <div>
-        <Hero />
-        <About />
-        <Goals />
-        <Info />
-        <Connect />
-      </div>
-
-      <Footer />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

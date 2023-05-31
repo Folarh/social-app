@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+
+//styles
 import "./Navbar.css";
 import { useState } from "react";
 
@@ -5,7 +8,7 @@ import { useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import ClearIcon from "@mui/icons-material/Clear";
 
-export default function Navbar() {
+const Navbar: React.FC = () => {
   const [toggle, setToggle] = useState<Boolean>(false);
   return (
     <nav className="navbar">
@@ -15,15 +18,21 @@ export default function Navbar() {
       <div className="tg" id={toggle ? "navigation-mobile" : ""}>
         <div className="navigations">
           <ul>
-            <li>Home</li>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
             <li>About Us</li>
             <li>Contact</li>
             <li>Blogs</li>
           </ul>
         </div>
         <div className="auth">
-          <button className="login">Login</button>
-          <button className="signup">Sign Up</button>
+          <button className="login">
+            <Link to="/login">Login</Link>
+          </button>
+          <button className="signup">
+            <Link to="/signup">Sign Up</Link>
+          </button>
         </div>
       </div>
 
@@ -36,4 +45,6 @@ export default function Navbar() {
       </div>
     </nav>
   );
-}
+};
+
+export default Navbar;
