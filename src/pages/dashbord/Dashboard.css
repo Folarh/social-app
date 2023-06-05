@@ -1,6 +1,50 @@
 .dashboard {
-  border: 2px solid red;
   display: flex;
   justify-content: space-between;
   min-height: 100vh;
+}
+
+/*........... DASHTOP CSSS/......... */
+.dashtop {
+  display: flex;
+  justify-content: flex-end;
+  min-height: 17px;
+  border-bottom: 1px solid #d0d0d0;
+}
+
+.dashtop .search {
+  display: flex;
+  align-items: center;
+  border: 1px solid #d0d0d0;
+  margin: 10px;
+  border-radius: 8px;
+  min-width: 40%;
+  padding: 10px;
+}
+
+.dashtop .search input {
+  border: none;
+  padding: 10px;
+}
+.dashtop .user-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 30%;
+  padding: 20px;
+}
+
+.dashtop .user-icons img {
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+/* =================FEED STYLE======= */
+
+.feed {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0 50px;
+  margin: 30px;
+  border: 1px solid #d0d0d0;
 }

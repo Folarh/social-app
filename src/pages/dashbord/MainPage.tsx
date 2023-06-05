@@ -1,10 +1,13 @@
 //styles
+import DashTop from "./DashTop";
+import Feed from "./Feed";
 import "./MainPage.css";
 
 function MainPage() {
   return (
     <main className="main-page">
-      <h1>Main page</h1>
+      <DashTop />
+      <Feed />
     </main>
   );
 }
