@@ -30,13 +30,12 @@
 .navbar .navigations ul li {
   font-weight: 700;
 }
-.auth {
-  display: flex;
-  height: 50px;
-  overflow: hidden;
+
+.navbar .navigations ul li a {
+  color: #000000;
 }
 
-.navbar .auth .login {
+.navbar .auth .login-btn {
   background-color: #ffffff;
   color: #111111;
   padding: 0.5rem;
@@ -48,8 +47,11 @@
   border-radius: 5px;
   margin-right: 5px;
 }
+.navbar .auth .login-btn a {
+  color: #000000;
+}
 
-.navbar .auth .signup {
+.navbar .auth .signup-btn {
   background-color: #543ee0;
   color: #ffffff;
   padding: 0.5rem;
@@ -60,6 +62,10 @@
   border: 1px solid #543ee0;
   border-radius: 5px;
   margin-left: 5px;
+}
+
+.navbar .auth .signup-btn a {
+  color: #f1f1f1;
 }
 
 .harmburger {
@@ -116,12 +122,12 @@
     flex-direction: column;
   }
 
-  #navigation-mobile .signup {
+  #navigation-mobile .signup-btn {
     border: 1px solid #ffffff;
     font-size: 20px;
   }
 
-  #navigation-mobile .login {
+  #navigation-mobile .login-btn {
     border: 1px solid #ffffff;
     font-size: 20px;
   }

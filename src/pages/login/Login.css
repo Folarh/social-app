@@ -1,0 +1,77 @@
+.login {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+.login input {
+  padding: 20px;
+  margin: 10px 0;
+  width: 100%;
+}
+.login label {
+  display: block;
+}
+
+.login .login-left {
+  background-image: url(../../assets/bg.png);
+  width: 50%;
+  filter: brightness(0.5);
+  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff;
+}
+.login .login-left h1 {
+  font-weight: 900;
+  font-size: 47px;
+}
+
+.login .login-left p {
+  font-weight: 700;
+  font-size: 25px;
+}
+
+.login .log-in {
+  flex: 1;
+  padding: 100px;
+}
+
+.login .btn {
+  color: #ffffff;
+  background-color: #543ee0;
+  border: none;
+  padding: 1rem;
+  margin-top: 10px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.login .btn1 {
+  color: black;
+  background-color: #ffffff;
+  border: 1px solid grey;
+  padding: 1rem;
+  margin-top: 10px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+@media (width <=856px) {
+  .login {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .login .login-left {
+    width: 100%;
+    min-height: 500px;
+  }
+
+  .login .log-in {
+    padding: 20px;
+  }
+}

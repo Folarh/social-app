@@ -1,28 +1,48 @@
 import { useState } from "react";
-import useLogin from "../../hooks/useLogin";
+import { useNavigate } from "react-router-dom";
+
+//styles
+import "./Login.css";
 
 interface User {
   email: string;
   password: string;
 }
 
-export default function Login() {
+function Login(): JSX.Element {
+  const navigate = useNavigate();
+
+  const goBack = () => {
+    navigate(-1);
+  };
   const [user, setUser] = useState<User>({
     email: "",
     password: "",
   });
-  const { error, login } = useLogin();
 
+  // function to help user submit form
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    login(user.email, user.password);
   };
   return (
     <div className="login">
-      <h1>Login page</h1>
-      <form onSubmit={handleSubmit}>
+      <div className="login-left">
+        <h1>CHATTER</h1>
+        <p>
+          Unleash the Power of Words, Connect with Like-minded Readers and
+          Writers
+        </p>
+        <p></p>
+      </div>
+
+      {/* FORM INPUT  */}
+
+      <form className="log-in" onSubmit={handleSubmit}>
+        <button onClick={goBack}>Go back</button>
+        <h1 className="text-center">Welcome back</h1>
+
         {/* FORM FOR EMAIL */}
-        <div className="mb-6 mt-6">
+        <div className="">
           <label htmlFor="email">Email</label>
           <input
             type="email"
@@ -34,7 +54,7 @@ export default function Login() {
             required
           />
         </div>
-        {/* FORM FOR EMAIL */}
+        {/* FORM FOR PASSWORD */}
         <div className="mb-6 ">
           <label htmlFor="password">Password</label>
           <input
@@ -48,14 +68,10 @@ export default function Login() {
           />
         </div>
 
-        <button>SignUp</button>
-        <p>Forgot Password?</p>
-
-        <p>or</p>
-
-        <p>Create new account</p>
-        {error && <p>{error}</p>}
+        <button className="btn">Login</button>
       </form>
     </div>
   );
 }
+
+export default Login;

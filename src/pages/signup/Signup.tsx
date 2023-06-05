@@ -5,6 +5,7 @@ import "./Signup.css";
 import useSignup from "../../hooks/useSignup";
 // import useLogout from "../../hooks/useLogout";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 interface User {
   email: string;
@@ -15,6 +16,11 @@ interface User {
 }
 
 export default function Signup() {
+  const navigate = useNavigate();
+
+  const goBack = () => {
+    navigate(-1);
+  };
   const [user, setUser] = useState<User>({
     email: "",
     password: "",
@@ -45,6 +51,7 @@ export default function Signup() {
 
       {/* FORM INPUT  */}
       <form className="sign-up" onSubmit={handleSubmit}>
+        <button onClick={goBack}>Go back</button>
         <h1 className="text-center">Register as Writer/Reader</h1>
         <div className="form-names">
           <div className="form-names-first">

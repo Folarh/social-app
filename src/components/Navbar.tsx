@@ -27,10 +27,10 @@ const Navbar: React.FC = () => {
           </ul>
         </div>
         <div className="auth">
-          <button className="login">
+          <button className="login-btn">
             <Link to="/login">Login</Link>
           </button>
-          <button className="signup">
+          <button className="signup-btn">
             <Link to="/signup">Sign Up</Link>
           </button>
         </div>
