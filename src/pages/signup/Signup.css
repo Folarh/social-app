@@ -1,7 +1,7 @@
 .signup {
   display: flex;
   justify-content: center;
-  min-height: 100vh;
+  height: 100vh;
 }
 .signup input {
   padding: 20px;

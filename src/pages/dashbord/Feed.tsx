@@ -12,7 +12,7 @@ export default function Feed() {
 
       <div className="feed-post">
         <button>
-          <EditIcon />
+          <EditIcon className="edit" />
           <span>Post a comment</span>
         </button>
       </div>
