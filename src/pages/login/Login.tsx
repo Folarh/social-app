@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import useLogin from "../../hooks/useLogin";
 
 //styles
 import "./Login.css";
@@ -10,6 +11,7 @@ interface User {
 }
 
 function Login(): JSX.Element {
+  const { error, login } = useLogin();
   const navigate = useNavigate();
 
   const goBack = () => {
@@ -23,6 +25,8 @@ function Login(): JSX.Element {
   // function to help user submit form
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    login(user.email, user.password);
+    console.log(user.email, user.password);
   };
   return (
     <div className="login">
@@ -69,6 +73,7 @@ function Login(): JSX.Element {
         </div>
 
         <button className="btn">Login</button>
+        {error && <p>{error}</p>}
       </form>
     </div>
   );
