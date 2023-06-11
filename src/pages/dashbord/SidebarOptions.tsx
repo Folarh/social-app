@@ -6,7 +6,11 @@ import DraftsIcon from "@mui/icons-material/Drafts";
 import AnalyticsIcon from "@mui/icons-material/Analytics";
 import MovingIcon from "@mui/icons-material/Moving";
 
+//logout hook
+import useLogout from "../../hooks/useLogout";
+
 export default function SidebarOptions() {
+  const { logout } = useLogout();
   return (
     <div className="sidebar-options">
       <div className="sidebar-options-feed">
@@ -57,7 +61,9 @@ export default function SidebarOptions() {
           <div>
             <span>Notification</span>
           </div>
-          <p className="logout">Logout</p>
+          <p className="logout" onClick={logout}>
+            Logout
+          </p>
         </div>
       </div>
     </div>

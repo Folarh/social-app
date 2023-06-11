@@ -3,7 +3,7 @@ import "./Signup.css";
 
 // import use signup hook
 import useSignup from "../../hooks/useSignup";
-// import useLogout from "../../hooks/useLogout";
+
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -27,7 +27,6 @@ export default function Signup() {
 
   // custom sigup hook
   const { error, signup } = useSignup();
-  // const { logout } = useLogout();
 
   // function to help user submit form
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -95,12 +94,6 @@ export default function Signup() {
         <button className="btn1">Signup with Google</button>
         <button className="btn1">Signup with LinKedIn</button>
 
-        {/* <button
-          onClick={logout}
-        
-        >
-          Logout
-        </button> */}
         {error && <p>{error}</p>}
       </form>
     </div>

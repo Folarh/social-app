@@ -1,5 +1,6 @@
 import React, { createContext, useReducer, useEffect, ReactNode } from "react";
 import { auth } from "../firebase/config";
+import { onAuthStateChanged } from "firebase/auth";
 
 interface User {
   // Define the user properties
@@ -52,7 +53,7 @@ export const AuthContextProvider: React.FC<AuthContextProviderProps> = ({
   });
 
   useEffect(() => {
-    const unsub = auth.onAuthStateChanged((user) => {
+    const unsub = onAuthStateChanged(auth, (user) => {
       dispatch({ type: "AUTH_IS_READY", payload: user });
       unsub();
     });
@@ -66,86 +67,3 @@ export const AuthContextProvider: React.FC<AuthContextProviderProps> = ({
     </AuthContext.Provider>
   );
 };
-// // Define the shape of the user object
-// interface User {
-//   id: number;
-//   username: string;
-// }
-
-// // Define the shape of the state object
-// interface State {
-//   user: User | null;
-//   isAuthenticated: boolean;
-// }
-
-// // Define the auth provider children prop
-// interface MyComponentProps {
-//   children: ReactNode;
-// }
-
-// // Define the available actions for the reducer
-// // type Action =
-// //   | { type: "LOGIN"; payload: User }
-// //   | { type: "LOGOUT" }
-// //   | { type: "AUTH_IS_READY"; payload: User };
-
-// interface AuthAction {
-//    type: string
-//    payload?: any;
-//   }
-
-// // Define the initial state
-// const initialState: State = {
-//   user: null,
-//   isAuthenticated: false,
-// };
-
-// interface AuthContextValue extends State{
-//     dispatch: React.Dispatch<AuthAction>;
-// }
-
-// // Define the reducer function
-// function reducer(state: State, action: Action): State {
-//   switch (action.type) {
-//     case "LOGIN":
-//       return {
-//         ...state,
-//         user: action.payload,
-//         isAuthenticated: true,
-//       };
-//     case "LOGOUT":
-//       return {
-//         ...state,
-//         user: null,
-//         isAuthenticated: false,
-//       };
-
-//     case "AUTH_IS_READY":
-//       return {...state, user: action.payload, isAuthenticated: true };
-
-//     default:
-//       return state;
-//   }
-// }
-
-// // Create the context
-// export const AuthContext = createContext<AuthContextValue>
-
-// // Create the context provider
-// export const AuthProvider: React.FC<MyComponentProps> = ({ children }) => {
-//   const [state, dispatch] = useReducer(reducer, initialState);
-
-//   useEffect(() => {
-//     const unsub = auth.onAuthStateChanged((user) => {
-//       dispatch({ type: "AUTH_IS_READY", payload: user });
-//       unsub();
-//     });
-//   }, []);
-//   console.log("AuthContext state", state);
-
-//   return (
-//     <AuthContext.Provider value={{ ...state, dispatch }}>
-//       {children}
-//     </AuthContext.Provider>
-//   );
-// };
