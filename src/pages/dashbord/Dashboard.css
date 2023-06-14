@@ -130,3 +130,31 @@
 .post-icons span p {
   margin-left: 5px;
 }
+
+@media (width <=750px) {
+  .dashboard {
+    width: 100%;
+    margin: 0;
+  }
+  .dashtop {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .dashtop .search {
+    flex: 1;
+    padding-left: 30px;
+  }
+
+  .feed .feed-explore {
+    display: none;
+  }
+  .feed .feed-post {
+    display: flex;
+    justify-content: center;
+  }
+
+  .post-content {
+    max-width: 100%;
+  }
+}

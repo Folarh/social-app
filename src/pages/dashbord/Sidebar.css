@@ -3,6 +3,7 @@
   padding: 10px 30px;
   color: #626262;
   border-right: 1px solid #d0d0d0;
+  max-width: 100vh;
 }
 
 .sidebar H1 {
@@ -78,4 +79,10 @@
 
 .sidebar-options .sidebar-options-personal .personal-nav {
   padding: 20px;
+}
+
+@media (width <=750px) {
+  .sidebar {
+    display: none;
+  }
 }

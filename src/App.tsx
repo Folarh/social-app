@@ -15,16 +15,15 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<LandingPage />} />
-
           <Route
             path="/signup"
             element={!user ? <Signup /> : <Navigate to={"/dashboard"} />}
           />
+          s
           <Route
             path="/login"
             element={!user ? <Login /> : <Navigate to={"/dashboard"} />}
           />
-
           {authIsReady && (
             <Route
               path="/dashboard"

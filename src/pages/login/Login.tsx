@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import useLogin from "../../hooks/useLogin";
 
 //styles
@@ -31,7 +31,10 @@ function Login(): JSX.Element {
   return (
     <div className="login">
       <div className="login-left">
-        <h1>CHATTER</h1>
+        <Link to="/">
+          <h1>CHATTER</h1>
+        </Link>
+
         <p>
           Unleash the Power of Words, Connect with Like-minded Readers and
           Writers
