@@ -10,28 +10,29 @@
   justify-content: flex-end;
   min-height: 17px;
   border-bottom: 1px solid #d0d0d0;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .dashtop .search {
   display: flex;
   align-items: center;
   border: 1px solid #d0d0d0;
-  margin: 10px;
   border-radius: 8px;
   min-width: 40%;
-  padding: 10px;
 }
 
 .dashtop .search input {
   border: none;
-  padding: 10px;
+  padding: 7px;
+  width: 100%;
 }
 .dashtop .user-icons {
   display: flex;
   justify-content: center;
   align-items: center;
   min-width: 30%;
-  padding: 20px;
+  /* padding: 20px; */
 }
 
 .dashtop .user-icons img {
@@ -40,8 +41,12 @@
 }
 
 /* =================FEED STYLE======= */
-
-.feed {
+.feed-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 70px;
+}
+.feed-two {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -50,13 +55,13 @@
   border: 1px solid #d0d0d0;
   height: 70px;
 }
-.feed .feed-explore p {
+.feed-two .feed-explore p {
   color: rgb(173, 171, 171);
   font-weight: 900;
   margin-top: 10px;
 }
 
-.feed .feed-post button {
+.feed-two .feed-post button {
   padding: 10px;
   color: #ffffff;
   background-color: #543ee0;
@@ -66,7 +71,7 @@
   align-items: center;
 }
 
-.feed .feed-post button .edit {
+.feed-two .feed-post button .edit {
   color: #ffffff;
   margin-right: 5px;
 }
@@ -86,7 +91,7 @@
 /* ===============POST CONTENT============== */
 .post-content {
   padding: 20px 50px;
-  max-width: 70%;
+  max-width: 100%;
   border: 1px solid #d0d0d0;
 }
 .post-user-info {
@@ -146,15 +151,25 @@
     padding-left: 30px;
   }
 
-  .feed .feed-explore {
+  .feed-container {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .feed-two .feed-explore {
     display: none;
   }
-  .feed .feed-post {
+  .feed-two .feed-post {
     display: flex;
     justify-content: center;
   }
 
   .post-content {
     max-width: 100%;
+    line-height: 32px;
+  }
+  .post-content .post-info img {
+    height: 250px;
   }
 }
