@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Tabs.css";
-import Signup from "../pages/signup/Signup";
-import Login from "../pages/login/Login";
+import Signup from "./Signup";
+import Login from "./Login";
 
 // import Login from "../pages/login/Login";
 // import Signup from "../pages/signup/Signup";

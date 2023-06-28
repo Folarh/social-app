@@ -1,18 +1,19 @@
-import { useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
-import useLogin from "../../hooks/useLogin";
-
 //styles
-import "./Login.css";
-// import Tabs from "../../components/Tabs";
+import "./Signup.css";
+
+// import use signup hook
+import useSignup from "../hooks/useSignup";
+
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 interface User {
   email: string;
   password: string;
+  firstname: string;
 }
 
-function Login(): JSX.Element {
-  const { error, login } = useLogin();
+export default function Signup() {
   const navigate = useNavigate();
 
   const goBack = () => {
@@ -21,35 +22,40 @@ function Login(): JSX.Element {
   const [user, setUser] = useState<User>({
     email: "",
     password: "",
+    firstname: "",
   });
+
+  // custom sigup hook
+  const { error, signup } = useSignup();
 
   // function to help user submit form
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    login(user.email, user.password);
+    signup(user.email, user.password);
     console.log(user.email, user.password);
   };
   return (
-    <div className="login">
-      <div className="login-left">
-        <Link to="/">
-          <h1>CHATTER</h1>
-        </Link>
-
-        <p>
-          Unleash the Power of Words, Connect with Like-minded Readers and
-          Writers
-        </p>
-        <p></p>
-      </div>
-
+    <div className="signup">
       {/* FORM INPUT  */}
-
-      <form className="log-in" onSubmit={handleSubmit}>
+      <form className="sign-up" onSubmit={handleSubmit}>
         <button onClick={goBack}>Go back</button>
-        <h1 className="text-center">Welcome back</h1>
-
-        <div className="">
+        <h1 className="text-center">Register as Writer/Reader</h1>
+        <div className="form-names">
+          <div className="form-names-first">
+            <label htmlFor="username">Firstrname</label>
+            <input
+              type="text"
+              name="firstname"
+              id="firstname"
+              value={user.firstname}
+              onChange={(e) => setUser({ ...user, firstname: e.target.value })}
+              placeholder="input username "
+              required
+            />
+          </div>
+        </div>
+        {/* FORM FOR EMAIL */}
+        <div className="mb-6 mt-6">
           <label htmlFor="email">Email</label>
           <input
             type="email"
@@ -61,7 +67,7 @@ function Login(): JSX.Element {
             required
           />
         </div>
-
+        {/* FORM FOR PASSWORD */}
         <div className="mb-6 ">
           <label htmlFor="password">Password</label>
           <input
@@ -75,11 +81,12 @@ function Login(): JSX.Element {
           />
         </div>
 
-        <button className="btn">Login</button>
+        <button className="btn">Create Account</button>
+        <button className="btn1">Signup with Google</button>
+        <button className="btn1">Signup with LinKedIn</button>
+
         {error && <p>{error}</p>}
       </form>
     </div>
   );
 }
-
-export default Login;

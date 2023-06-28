@@ -1,46 +1,50 @@
-.login {
+.signup {
   display: flex;
   justify-content: center;
   height: 100vh;
 }
-.login input {
+.signup input {
   padding: 20px;
   margin: 10px 0;
   width: 100%;
 }
-.login label {
+.signup label {
   display: block;
 }
 
-.login .login-left {
-  background-image: url(../../assets/bg.png);
-  width: 50%;
-  filter: brightness(0.5);
-  object-fit: cover;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  color: #ffffff;
-}
-.login .login-left h1 {
+.signup .signup-left h1 {
   font-weight: 900;
   font-size: 47px;
 }
 
-.login .login-left p {
+.signup .signup-left p {
   font-weight: 700;
   font-size: 25px;
 }
 
-.login .log-in {
+.signup .sign-up {
   flex: 1;
   padding: 100px;
 }
 
-.login .btn {
+.form-names {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.form-names .form-names-first {
+  flex: 0.5;
+  margin-right: 10px;
+}
+
+.form-names .form-names-last {
+  flex: 0.5;
+  margin-left: 10px;
+}
+
+.signup .btn {
   color: #ffffff;
   background-color: #543ee0;
   border: none;
@@ -50,7 +54,7 @@
   border-radius: 5px;
 }
 
-.login .btn1 {
+.signup .btn1 {
   color: black;
   background-color: #ffffff;
   border: 1px solid grey;
@@ -61,17 +65,17 @@
 }
 
 @media (width <=856px) {
-  .login {
+  .signup {
     display: flex;
     flex-direction: column;
   }
 
-  .login .login-left {
+  .signup .signup-left {
     width: 100%;
     min-height: 500px;
   }
 
-  .login .log-in {
+  .signup .sign-up {
     padding: 20px;
   }
 }

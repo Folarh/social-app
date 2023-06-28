@@ -9,7 +9,6 @@ const AddPost: React.FC = () => {
   const [text, setText] = useState("");
   const [image, setImage] = useState<File | null>(null);
   const [imageUrl, setImageUrl] = useState<string[]>([]);
-  const [video, setVideo] = useState<File | null>(null);
 
   const handleTextChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setText(e.target.value);
@@ -18,12 +17,6 @@ const AddPost: React.FC = () => {
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files.length > 0) {
       setImage(e.target.files[0]);
-    }
-  };
-
-  const handleVideoChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files && e.target.files.length > 0) {
-      setVideo(e.target.files[0]);
     }
   };
 
@@ -43,14 +36,10 @@ const AddPost: React.FC = () => {
         alert("image uploaded");
       });
     }
-    if (video) {
-      // Upload video to Firebase Storage and update the document with the video URL
-    }
 
     // Clear form
     setText("");
     setImage(null);
-    setVideo(null);
   };
   const imageListRef = ref(storage, "images/");
   useEffect(() => {
@@ -77,12 +66,7 @@ const AddPost: React.FC = () => {
         onChange={handleImageChange}
         key={image?.name}
       />
-      {/* <input
-        type="file"
-        accept="video/*"
-        onChange={handleVideoChange}
-        key={video?.name}
-      /> */}
+
       <button type="submit">Submit</button>
       {imageUrl.map((url) => {
         return <PostContent url={url} />;

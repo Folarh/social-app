@@ -1,5 +1,5 @@
 import UserImg from "../../assets/user.png";
-import postTmg from "../../assets/hero.png";
+// import postTmg from "../../assets/hero.png";
 
 //materialui icons
 import ForumIcon from "@mui/icons-material/Forum";
