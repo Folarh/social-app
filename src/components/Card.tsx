@@ -1,5 +1,5 @@
 interface CardProps {
-  icon: string;
+  icon: React.ReactNode;
   header: string;
   info: string;
 }
@@ -7,7 +7,8 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ icon, header, info }) => {
   return (
     <div className="card">
-      <img src={icon} />
+      {/* <img src={icon} /> */}
+      <span>{icon}</span>
       <h2>{header}</h2>
       <p>{info}</p>
     </div>

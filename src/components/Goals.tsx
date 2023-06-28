@@ -1,11 +1,9 @@
 //icons
-// import AutoGraphRoundedIcon from '@mui/icons-material/AutoGraphRounded';
-// import Diversity3RoundedIcon from '@mui/icons-material/Diversity3Rounded';
+import AutoGraphRoundedIcon from "@mui/icons-material/AutoGraphRounded";
+import Diversity3RoundedIcon from "@mui/icons-material/Diversity3Rounded";
+import AnalyticsIcon from "@mui/icons-material/Analytics";
 
 //images
-import icon from "../assets/Ellipse 6.png";
-import icon1 from "../assets/Ellipse 6 (1).png";
-import icon2 from "../assets/Ellipse 6 (2).png";
 
 //styles
 import "./Goals.css";
@@ -24,19 +22,19 @@ export default function Goals() {
       </p>
       <div className="cards">
         <Card
-          icon={icon}
+          icon={<AnalyticsIcon />}
           header="Analytics"
           info="Analytics to track the number of views, likes and comment and also analyze the performance of your articles over a period of time"
         />
 
         <Card
-          icon={icon1}
+          icon={<AutoGraphRoundedIcon />}
           header="Social Interactions"
           info="Users on the platform can interact with posts they like, comment and engage in discussions"
         />
 
         <Card
-          icon={icon2}
+          icon={<Diversity3RoundedIcon />}
           header="Content Creation"
           info="Write nice and appealing with our in-built markdown, a rich text editor"
         />
