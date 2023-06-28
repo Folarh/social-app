@@ -3,14 +3,15 @@
   padding: 10px 30px;
   color: #626262;
   border-right: 1px solid #d0d0d0;
-  max-width: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
 }
 
 .sidebar H1 {
   color: #543ee0;
   font-weight: 800;
   font-size: 32px;
-  line-height: 35px;
+  /* line-height: 35px; */
 }
 
 /* -----------SIDEBAR OPTIONS=-----------*/
@@ -31,7 +32,8 @@
 .sidebar-options .sidebar-options-feed .icons-nav {
   display: flex;
   align-items: center;
-  padding: 20px;
+  padding-left: 20px;
+  margin-bottom: 10px;
 }
 
 .sidebar-options .sidebar-options-feed .icons-nav .icon {
@@ -39,8 +41,7 @@
 }
 
 .sidebar-options .sidebar-options-trending {
-  margin-top: 2rem;
-  line-height: 35px;
+  margin-top: 1rem;
   font-weight: 400;
   font-size: 16px;
 }
@@ -54,6 +55,9 @@
 .sidebar-options .sidebar-options-trending .trending-tags-nav {
   padding: 20px;
 }
+.sidebar-options .sidebar-options-trending .trending-tags-nav p {
+  margin-bottom: 10px;
+}
 
 .sidebar-options .sidebar-options-trending .header .trending-tags {
   color: #111111;
@@ -61,10 +65,7 @@
 }
 
 .sidebar-options .sidebar-options-personal {
-  margin-top: 2rem;
-  line-height: 35px;
   font-weight: 400;
-  font-size: 16px;
 }
 
 .sidebar-options .sidebar-options-personal .personal {
@@ -73,6 +74,7 @@
 }
 
 .sidebar-options .sidebar-options-personal .logout {
+  margin-top: 1.5rem;
   color: #ff1400;
   font-weight: 800;
 }

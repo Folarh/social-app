@@ -1,0 +1,25 @@
+.hi {
+  display: flex;
+  justify-content: space-between;
+  border: px solid green;
+}
+.taa {
+  display: flex;
+  justify-content: space-between;
+  min-height: 6px;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.tabs-active {
+  background-color: blue;
+  width: 50%;
+}
+
+.active-content {
+  display: block;
+}
+
+.content {
+  display: none;
+}

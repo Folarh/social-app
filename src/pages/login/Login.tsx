@@ -4,6 +4,7 @@ import useLogin from "../../hooks/useLogin";
 
 //styles
 import "./Login.css";
+// import Tabs from "../../components/Tabs";
 
 interface User {
   email: string;
@@ -48,7 +49,6 @@ function Login(): JSX.Element {
         <button onClick={goBack}>Go back</button>
         <h1 className="text-center">Welcome back</h1>
 
-        {/* FORM FOR EMAIL */}
         <div className="">
           <label htmlFor="email">Email</label>
           <input
@@ -61,7 +61,7 @@ function Login(): JSX.Element {
             required
           />
         </div>
-        {/* FORM FOR PASSWORD */}
+
         <div className="mb-6 ">
           <label htmlFor="password">Password</label>
           <input

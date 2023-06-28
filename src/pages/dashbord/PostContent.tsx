@@ -6,7 +6,11 @@ import ForumIcon from "@mui/icons-material/Forum";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import AnalyticsIcon from "@mui/icons-material/Analytics";
 
-export default function PostContent() {
+interface myComponentProp {
+  url: string;
+}
+
+const PostContent: React.FC<myComponentProp> = ({ url }) => {
   return (
     <section className="post-content">
       <div className="post-user-info">
@@ -33,7 +37,7 @@ export default function PostContent() {
           opportunity to shape the way people interact with the world around
           them.
         </p>
-        <img src={postTmg} />
+        <img src={url} />
         <div className="post-icons">
           <span>
             <ForumIcon />
@@ -51,4 +55,6 @@ export default function PostContent() {
       </div>
     </section>
   );
-}
+};
+
+export default PostContent;

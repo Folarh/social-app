@@ -10,9 +10,7 @@ function MainPage() {
     <main className="main-page">
       <DashTop />
       <Feed />
-      {/* <ToggleFeeds />
-      <PostContent />
-      <PostContent /> */}
+      {/* <ToggleFeeds /> */}
     </main>
   );
 }

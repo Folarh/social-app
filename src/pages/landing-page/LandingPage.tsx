@@ -6,6 +6,7 @@ import Info from "../../components/Info";
 import Connect from "../../components/Connect";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import Tabs from "../../components/Tabs";
 export default function LandingPage() {
   return (
     <section>
@@ -15,6 +16,7 @@ export default function LandingPage() {
       <Goals />
       <Info />
       <Connect />
+      {/* <Tabs /> */}
       <Footer />
     </section>
   );
