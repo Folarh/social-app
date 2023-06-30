@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+
 import useAuthContext from "./hooks/useAuthContext";
 //styles
 import "./App.css";
@@ -13,6 +14,8 @@ function App() {
     <div className="app">
       <BrowserRouter>
         <Routes>
+          {/* <Route path="/" element={<Dashboard />} />
+        </Routes> */}
           <Route path="/" element={<LandingPage />} />
           <Route
             path="/signup"

@@ -3,6 +3,10 @@
   justify-content: center;
   height: 100vh;
 }
+
+.login h1 {
+  margin-bottom: 1rem;
+}
 .login input {
   padding: 20px;
   margin: 10px 0;

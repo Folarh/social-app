@@ -4,7 +4,6 @@
   background-color: #ffffff;
   padding: 10px 50px;
   align-items: center;
-  /* position: sticky; */
   top: 0;
   z-index: 100;
   min-height: 70px;
@@ -118,8 +117,16 @@
   #navigation-mobile .navigations ul {
     display: flex;
     gap: 40px;
-    font-size: 40px;
+    font-size: 25px;
     flex-direction: column;
+    cursor: pointer;
+  }
+
+  .navbar .navigations ul li:hover {
+    color: red;
+  }
+  .navbar .navigations ul li a {
+    color: white;
   }
 
   #navigation-mobile .signup-btn {

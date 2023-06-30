@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import useLogin from "../hooks/useLogin";
 
 //styles
@@ -13,11 +13,11 @@ interface User {
 
 function Login(): JSX.Element {
   const { error, login } = useLogin();
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
-  const goBack = () => {
-    navigate(-1);
-  };
+  // const goBack = () => {
+  //   navigate(-1);
+  // };
   const [user, setUser] = useState<User>({
     email: "",
     password: "",
@@ -34,7 +34,7 @@ function Login(): JSX.Element {
       {/* FORM INPUT  */}
 
       <form className="log-in" onSubmit={handleSubmit}>
-        <button onClick={goBack}>Go back</button>
+        {/* <button onClick={goBack}>Go back</button> */}
         <h1 className="text-center">Welcome back</h1>
 
         <div className="">

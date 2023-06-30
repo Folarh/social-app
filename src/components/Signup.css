@@ -3,6 +3,10 @@
   justify-content: center;
   height: 100vh;
 }
+
+.signup h1 {
+  margin-bottom: 2rem;
+}
 .signup input {
   padding: 20px;
   margin: 10px 0;
@@ -52,16 +56,7 @@
   margin-top: 10px;
   width: 100%;
   border-radius: 5px;
-}
-
-.signup .btn1 {
-  color: black;
-  background-color: #ffffff;
-  border: 1px solid grey;
-  padding: 1rem;
-  margin-top: 10px;
-  width: 100%;
-  border-radius: 5px;
+  cursor: pointer;
 }
 
 @media (width <=856px) {

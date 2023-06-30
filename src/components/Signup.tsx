@@ -5,7 +5,7 @@ import "./Signup.css";
 import useSignup from "../hooks/useSignup";
 
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 interface User {
   email: string;
@@ -14,11 +14,11 @@ interface User {
 }
 
 export default function Signup() {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
-  const goBack = () => {
-    navigate(-1);
-  };
+  // const goBack = () => {
+  //   navigate(-1);
+  // };
   const [user, setUser] = useState<User>({
     email: "",
     password: "",
@@ -38,22 +38,22 @@ export default function Signup() {
     <div className="signup">
       {/* FORM INPUT  */}
       <form className="sign-up" onSubmit={handleSubmit}>
-        <button onClick={goBack}>Go back</button>
+        {/* <button onClick={goBack}>Go back</button> */}
         <h1 className="text-center">Register as Writer/Reader</h1>
-        <div className="form-names">
-          <div className="form-names-first">
-            <label htmlFor="username">Firstrname</label>
-            <input
-              type="text"
-              name="firstname"
-              id="firstname"
-              value={user.firstname}
-              onChange={(e) => setUser({ ...user, firstname: e.target.value })}
-              placeholder="input username "
-              required
-            />
-          </div>
+
+        <div className="form-names-first">
+          <label htmlFor="username">Firstrname</label>
+          <input
+            type="text"
+            name="firstname"
+            id="firstname"
+            value={user.firstname}
+            onChange={(e) => setUser({ ...user, firstname: e.target.value })}
+            placeholder="input username "
+            required
+          />
         </div>
+
         {/* FORM FOR EMAIL */}
         <div className="mb-6 mt-6">
           <label htmlFor="email">Email</label>
@@ -82,8 +82,6 @@ export default function Signup() {
         </div>
 
         <button className="btn">Create Account</button>
-        <button className="btn1">Signup with Google</button>
-        <button className="btn1">Signup with LinKedIn</button>
 
         {error && <p>{error}</p>}
       </form>

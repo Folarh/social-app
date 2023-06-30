@@ -10,7 +10,7 @@
 
 .goals p {
   margin-top: 1rem;
-  color: #8b8b8b;
+  color: rgb(75, 74, 74);
   font-weight: 600;
 }
 
@@ -21,9 +21,13 @@
 }
 
 .card {
-  border: 0.5px solid grey;
+  border: 0.5px solid rgb(231, 229, 229);
   padding: 20px;
   width: 280px;
+}
+
+.card p {
+  color: rgb(109, 106, 106);
 }
 
 @media (max-width: 820px) {

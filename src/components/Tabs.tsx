@@ -15,16 +15,10 @@ export default function Tabs() {
   return (
     <>
       <div className="hi">
-        <div
-          // className={toggle == 1 ? "tabs-active" : "tabs"}
-          onClick={() => toggleTab(1)}
-        >
+        <div className="reg" onClick={() => toggleTab(1)}>
           REGISTER
         </div>
-        <div
-          // className={toggle == 2 ? "tabs-active" : "tabs"}
-          onClick={() => toggleTab(2)}
-        >
+        <div className="reg" onClick={() => toggleTab(2)}>
           LOGIN
         </div>
       </div>

@@ -1,7 +1,10 @@
 .hi {
+  margin-top: 2rem;
+  padding: 30px;
   display: flex;
   justify-content: space-between;
   border: px solid green;
+  cursor: pointer;
 }
 .taa {
   display: flex;
@@ -10,9 +13,14 @@
   border-radius: 8px;
   width: 100%;
 }
+.reg {
+  font-weight: 800;
+}
 
 .tabs-active {
   background-color: blue;
+  margin-left: 30px;
+  margin-right: 30px;
   width: 50%;
 }
 
