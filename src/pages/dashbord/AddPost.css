@@ -1,0 +1,58 @@
+.create {
+  height: 50vh;
+  border: 1px solid rgb(243, 239, 239);
+}
+
+#file {
+  display: none;
+}
+.create-post {
+  position: relative;
+}
+
+.create-post-group {
+  display: flex;
+  margin-top: 20px;
+  margin: 30px;
+  align-items: center;
+}
+
+.create-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 25px;
+
+  border: 1px solid;
+  color: #c9c5c5;
+  cursor: pointer;
+}
+
+.create-input {
+  font-size: 30px;
+  border: none;
+  padding: 10px;
+}
+
+.create-input:focus {
+  outline: none;
+}
+
+.create-text {
+  font-size: 20px;
+}
+
+.create-btn {
+  align-self: center;
+  text-align: center;
+  padding: 10px;
+  background-color: #543ee0;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  width: 150px;
+  cursor: pointer;
+  font-size: 15px;
+  margin: 30px;
+}
