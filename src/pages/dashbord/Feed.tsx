@@ -1,8 +1,6 @@
 // material icon
 
 import EditIcon from "@mui/icons-material/Edit";
-import ToggleFeeds from "./ToggleFeeds";
-import PostContent from "./PostContent";
 import AddPost from "./AddPost";
 
 export default function Feed() {
@@ -23,9 +21,6 @@ export default function Feed() {
           </div>
         </div>
         <AddPost />
-        {/* <ToggleFeeds /> */}
-
-        {/* <PostContent /> */}
       </div>
     </main>
   );
